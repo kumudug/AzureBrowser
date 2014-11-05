@@ -25,6 +25,10 @@ namespace AzureBrowserApp
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //to make web api return camel case json objects
+            var jsonFormatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }
 }
