@@ -22,21 +22,24 @@ namespace WriteSampleTestData
 
         public void WriteSampleTableData(List<SampleTableEntity> entities)
         {
-            TableBatchOperation insertOperation = new TableBatchOperation();
+            for (int i = 0; i < entities.Count; i = i + 100)
+            {
+                TableBatchOperation insertOperation = new TableBatchOperation();
 
-            foreach(var entity in entities)
-            {
-                insertOperation.Insert(entity);
-            }
+                foreach (var entity in entities.GetRange(i, entities.Count - i >= 100 ? 100: entities.Count-i))
+                {
+                    insertOperation.Insert(entity);
+                }
 
-            try
-            {
-                var result = _settings.TestTable.ExecuteBatch(insertOperation);
-                _log.WriteLine(string.Format("Wrote {0} items into {1} table", result.Count, _settings.TestTable.Name));
-            }
-            catch (StorageException ex)
-            {
-                _log.WriteLine(string.Format("Error when writing to table {0} : {1}", _settings.TestTable.Name, ex.Message));
+                try
+                {
+                    var result = _settings.TestTable.ExecuteBatch(insertOperation);
+                    _log.WriteLine(string.Format("Wrote {0} items into {1} table", result.Count, _settings.TestTable.Name));
+                }
+                catch (StorageException ex)
+                {
+                    _log.WriteLine(string.Format("Error when writing to table {0} : {1}", _settings.TestTable.Name, ex.Message));
+                }
             }
         }
     }

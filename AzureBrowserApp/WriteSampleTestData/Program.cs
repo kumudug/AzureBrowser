@@ -14,7 +14,7 @@ namespace WriteSampleTestData
     {
         static void Main(string[] args)
         {
-            var tblRows = Util.GetTableEntities(10);
+            var tblRows = Util.GetTableEntities(1035);
             
             var builder = new ContainerBuilder();
             builder.RegisterInstance(tblRows).As<List<SampleTableEntity>>();
