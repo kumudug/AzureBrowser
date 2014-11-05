@@ -8,5 +8,11 @@
     <Setting Name="PrimaryAccessKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">set access key</Value>
     </Setting>
+    <Setting Name="TestTableName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TestTable</Value>
+    </Setting>
+    <Setting Name="TestQueueName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TestQueue</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

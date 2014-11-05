@@ -46,5 +46,29 @@ namespace WriteSampleTestData.Properties {
                 this["PrimaryAccessKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TestTable")]
+        public string TestTableName {
+            get {
+                return ((string)(this["TestTableName"]));
+            }
+            set {
+                this["TestTableName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TestQueue")]
+        public string TestQueueName {
+            get {
+                return ((string)(this["TestQueueName"]));
+            }
+            set {
+                this["TestQueueName"] = value;
+            }
+        }
     }
 }
