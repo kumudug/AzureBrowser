@@ -26,7 +26,7 @@ namespace WriteSampleTestData
             {
                 TableBatchOperation insertOperation = new TableBatchOperation();
 
-                foreach (var entity in entities.GetRange(i, entities.Count - i >= 100 ? 100: entities.Count-i))
+                foreach (var entity in entities.GetRange(i, entities.Count - i >= 100 ? 100 : entities.Count - i))
                 {
                     insertOperation.Insert(entity);
                 }
