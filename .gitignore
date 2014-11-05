@@ -181,6 +181,4 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
-AzureBrowserApp/WriteSampleTestData/App.config
-AzureBrowserApp/WriteSampleTestData/Properties/Settings.Designer.cs
-AzureBrowserApp/WriteSampleTestData/Properties/Settings.settings
+
