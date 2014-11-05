@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="SampleTableEntity.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="WriteSampleData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

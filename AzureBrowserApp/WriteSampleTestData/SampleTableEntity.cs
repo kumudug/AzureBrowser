@@ -9,11 +9,10 @@ namespace WriteSampleTestData
 {
     public class SampleTableEntity : TableEntity
     {
-        static int rowKey = 0;
-        static readonly Guid partKey = Guid.NewGuid();
-        public Guid TablePartitionKey { get; set; }
-
-        public static int TableRowKey
+        static int rowKey = 1;
+        static Guid partKey = Guid.NewGuid();
+        
+        private static int TableRowKey
         {
             get
             {
@@ -31,14 +30,12 @@ namespace WriteSampleTestData
         //Empty constructor is needed by TableEntity
         public SampleTableEntity()
         {
-            TableRowKey = 1;
             this.PartitionKey = partKey.ToString();
             this.RowKey = TableRowKey.ToString();
         }
 
         public SampleTableEntity(int intSample, double dblSample, string stringSample)
         {
-            TableRowKey = 1;
             this.PartitionKey = partKey.ToString();
             this.RowKey = TableRowKey.ToString();
             IntSample = intSample;

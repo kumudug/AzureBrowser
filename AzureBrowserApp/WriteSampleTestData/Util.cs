@@ -14,7 +14,7 @@ namespace WriteSampleTestData
 
             for (int i = 0; i < rowCount; i++)
             {
-                var entity = new SampleTableEntity(int.MaxValue - 1, double.MaxValue - i, "value-" + i.ToString());
+                var entity = new SampleTableEntity(int.MaxValue - i, double.MaxValue - i, "value-" + i.ToString());
                 tblEntityList.Add(entity);
             }
 
