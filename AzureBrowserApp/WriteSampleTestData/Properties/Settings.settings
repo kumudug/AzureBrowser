@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WriteSampleTestData.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StorageAccountName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">azurebrowserapp</Value>
+    </Setting>
+    <Setting Name="PrimaryAccessKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">set access key</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
